@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '${PORT:-3000}:3000'
+    environment:
+      - NODE_ENV=production
+      - PORT=${PORT:-3000}
+      - UNISWAP_V3_BASE_SUBGRAPH_URL=${UNISWAP_V3_BASE_SUBGRAPH_URL}
+      - UNISWAP_V4_BASE_SUBGRAPH_URL=${UNISWAP_V4_BASE_SUBGRAPH_URL}
+      - GRAPH_API_KEY=${GRAPH_API_KEY}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - PRIVATE_KEY=${PRIVATE_KEY}
+      - BASE_SEPOLIA_RPC=${BASE_SEPOLIA_RPC}
+      - BASE_MAINNET_RPC=${BASE_MAINNET_RPC}
+      - POSTGRES_URL=${POSTGRES_URL}
+      - DEMO_MODE=${DEMO_MODE}
+    restart: unless-stopped
+    volumes:
+      - ./logs:/app/logs
