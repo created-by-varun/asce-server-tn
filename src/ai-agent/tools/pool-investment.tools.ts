@@ -5,7 +5,7 @@ import { tool } from 'ai';
 import { serviceRegistry } from './service-registry';
 
 // RPC URL for Base Sepolia testnet
-const RPC_URL = process.env.BASE_SEPOLIA_RPC || 'https://sepolia.base.org';
+const RPC_URL = process.env.BASE_MAINNET_RPC || 'https://sepolia.base.org';
 // Minimum balance required for gas fees (0.001 ETH)
 const MIN_BALANCE_FOR_GAS = ethers.parseEther('0.001');
 

@@ -15,7 +15,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 // Configuration
-const RPC_URL: string = process.env.BASE_SEPOLIA_RPC!;
+const RPC_URL: string = process.env.BASE_MAINNET_RPC!;
 const PRIVATE_KEY: string = process.env.PRIVATE_KEY!;
 
 // Contract addresses for different networks

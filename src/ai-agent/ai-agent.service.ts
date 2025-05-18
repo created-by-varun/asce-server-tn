@@ -58,7 +58,7 @@ export class AiAgentService {
         },
         chain: baseSepolia, // Using Base Sepolia testnet
         transport: http(
-          process.env.BASE_SEPOLIA_RPC || 'https://sepolia.base.org',
+          process.env.BASE_MAINNET_RPC || 'https://sepolia.base.org',
         ),
       });
 

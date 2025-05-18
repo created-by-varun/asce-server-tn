@@ -44,7 +44,7 @@ export class DashboardService {
 
   constructor(private readonly poolCacheService: PoolCacheService) {
     // Initialize provider with the RPC URL (from environment variable)
-    const rpcUrl = process.env.BASE_SEPOLIA_RPC || 'https://sepolia.base.org';
+    const rpcUrl = process.env.BASE_MAINNET_RPC || 'https://sepolia.base.org';
     // Base Sepolia doesn't support ENS, set up provider with staticNetwork to avoid ENS lookups
     this.provider = new ethers.JsonRpcProvider(rpcUrl, undefined, {
       staticNetwork: true, // Prevents ENS lookups by treating the network as static
