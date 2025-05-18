@@ -432,13 +432,13 @@ async function main(): Promise<void> {
       id: '0xD19fF37472161d05902f33a9733Cc1f6797fB580',
       feeTier: '3000',
       token0: {
-        id: '0x16f869dc5BfE8dfB239BDd2774876f3daDD934cD',
+        id: '0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb',
         decimals: '18',
         symbol: 'DAI',
         name: 'DAI',
       },
       token1: {
-        id: '0xa91e0f6d622108a97df116A6eA5b5687034Fb39e',
+        id: '0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2',
         decimals: '6',
         symbol: 'USDT',
         name: 'USDT',

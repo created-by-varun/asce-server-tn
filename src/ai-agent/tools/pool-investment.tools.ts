@@ -12,25 +12,25 @@ const MIN_BALANCE_FOR_GAS = ethers.parseEther('0.001');
 // Token information for supported tokens
 const TOKENS = {
   usdt: {
-    address: '0xa91e0f6d622108a97df116A6eA5b5687034Fb39e', // USDT on Ethereum Mainnet
+    address: '0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2', // USDT on Ethereum Mainnet
     decimals: 6,
     name: 'USDT',
     symbol: 'USDT',
   },
   usdc: {
-    address: '0x54e98382b0e5E1260a6C458Ea38ACB2f5Fc5c705', // USDC on Ethereum Mainnet
+    address: '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913', // USDC on Ethereum Mainnet
     decimals: 6,
     name: 'USD Coin',
     symbol: 'USDC',
   },
   dai: {
-    address: '0x16f869dc5BfE8dfB239BDd2774876f3daDD934cD', // DAI on Ethereum Mainnet
+    address: '0x50c5725949A6F0c72E6C4a641F24049A917DB0Cb', // DAI on Ethereum Mainnet
     decimals: 18,
     name: 'DAI',
     symbol: 'DAI',
   },
   eth: {
-    address: '0x0FF4C36AD67d4E64A903F59070a76e0Bf836E7db', // WETH on Ethereum Mainnet
+    address: '0x4200000000000000000000000000000000000006', // WETH on Ethereum Mainnet
     decimals: 18,
     name: 'Wrapped Ether',
     symbol: 'WETH',
@@ -39,9 +39,9 @@ const TOKENS = {
 
 // Pool contract addresses for different risk levels
 const POOL_ADDRESSES = {
-  low: '0x8a4dd22bcd307fca80db7eefb090e430badccf7f', // Low risk pool address
-  medium: '0x265e2068955685c3676ea1c075257ab0bf5148b4', // Medium risk pool address
-  high: '0x1527b9f572C49EC1D9240D66a882A2AaACceC8f8', // High risk pool address
+  low: '0xa05d5c0De9e033954B532A40E7b43A23B92600f9', // Low risk pool address
+  medium: '0x698036f984fcf2225895748f4d80e25749437d24', // Medium risk pool address
+  high: '0x319cb8bECEb0bC1eb961EeE1Eb95193c53149e21', // High risk pool address
 };
 
 // Interface for transaction data
