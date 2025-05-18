@@ -1,30 +1,18 @@
-FROM node:18-alpine AS builder
+FROM node:18-alpine
 
 WORKDIR /app
 
-# Copy package files and install dependencies
+# Copy package files first for better caching
 COPY package.json yarn.lock ./
-RUN yarn install
+
+# Install dependencies with NPM instead of Yarn for better Railway compatibility
+RUN npm install
 
 # Copy source files
 COPY . .
 
 # Build the application
-RUN yarn build
-
-# Production stage
-FROM node:18-alpine AS production
-
-WORKDIR /app
-
-# Copy package files and install production-only dependencies
-COPY package.json yarn.lock ./
-RUN yarn install --production
-
-# Copy built application from builder stage
-COPY --from=builder /app/dist ./dist
-COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
-COPY --from=builder /app/prisma ./prisma
+RUN npm run build
 
 # Expose application port
 EXPOSE 3000
