@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Copy package files and install dependencies
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile
+RUN yarn install
 
 # Copy source files
 COPY . .
@@ -19,7 +19,7 @@ WORKDIR /app
 
 # Copy package files and install production-only dependencies
 COPY package.json yarn.lock ./
-RUN yarn install --frozen-lockfile --production
+RUN yarn install --production
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
