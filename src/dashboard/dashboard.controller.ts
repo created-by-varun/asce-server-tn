@@ -1,6 +1,6 @@
 import { Controller, Get, Param, Query, Logger } from '@nestjs/common';
 import { DashboardService, UserPoolBalance } from './dashboard.service';
-import { POOL_ADDRESSES } from 'src/common/utils/pool.constants';
+import { POOL_ADDRESSES } from '@common/utils/pool.constants';
 import {
   ApiOperation,
   ApiParam,
@@ -116,7 +116,7 @@ export class DashboardController {
   async getPoolTokenSupply(@Query('poolIndex') poolIndex: string) {
     const index = parseInt(poolIndex || '0');
     this.logger.log(`Getting token supplies for pool index: ${index}`);
-    
+
     return this.dashboardService.getPoolTokenSupply({
       name:
         index === 0

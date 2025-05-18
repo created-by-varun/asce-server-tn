@@ -1,0 +1,19 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@ai-agent/*": ["src/ai-agent/*"],
+      "@common/*": ["src/common/*"],
+      "@dashboard/*": ["src/dashboard/*"],
+      "@uniswap/*": ["src/uniswap/*"],
+      "@vault/*": ["src/vault/*"],
+      "@config/*": ["src/config/*"],
+      "@graph/*": ["src/graph/*"],
+      "@contracts/*": ["src/contracts/*"]
+    }
+  },
+  "include": ["src/**/*", "test/**/*"]
+}
